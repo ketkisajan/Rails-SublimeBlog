@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SublimeBlog</title>
+    <title>Sublime Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,8 +9,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+   <body>
+    
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
+    <div class="container">
     <%= yield %>
+    </div>
+    
+    
+
+     <%= render 'layouts/footer' %>
+    
   </body>
 </html>
