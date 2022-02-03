@@ -1,0 +1,4 @@
+<h1 class="text-center"><%= @user.username %></h1>
+
+<p class="text-center"><i>Articles by <%= @user.username %></i></p>
+<%= render 'articles/article', obj: @user.articles %>
