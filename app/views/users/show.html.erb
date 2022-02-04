@@ -1,4 +1,21 @@
-<h1 class="text-center"><%= @user.username %></h1>
+<h1 class="text-center"><%= @user.username %><i>, welcome</i></h1>
 
-<p class="text-center"><i>Articles by <%= @user.username %></i></p>
+
+<div class="text-center mt-4">
+
+             <%= link_to "Edit profile", edit_user_path(@user), class: "btn btn-outline-info" %>
+
+</div>
+
+
+<h4 class="text-center"><i>Articles by <%= @user.username %></i></h4>
+
+<div class="center">
+  <%= will_paginate @articles %>
+</div>
+
 <%= render 'articles/article', obj: @user.articles %>
+
+<div class="center">
+  <%= will_paginate @articles %>
+</div>
