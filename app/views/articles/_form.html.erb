@@ -22,13 +22,11 @@
       <div class="form-group">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
-            <%
-=begin%>
+         
  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
               <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text } %>
             <% end %> 
-<%
-=end%>
+
           </div>
         </div>
       </div>

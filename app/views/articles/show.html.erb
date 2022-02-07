@@ -18,13 +18,11 @@
           </div> 
 
         </div>
-       <%
-=begin%>
-  <% if article.categories.any? %>
-          <p>Categories: <%= render article.categories %></p>
+      
+  <% if @article.categories.any? %>
+          <p>Categories: <%= render @article.categories %></p>
         <% end %> 
-<%
-=end%>
+
         
  <% if logged_in? && (current_user == @article.user || current_user.admin?) %> 
 
